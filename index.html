@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="./css/common.css">
+	<title>Hello, world!</title>
+</head>
+
+<body>
+	<h1>Hello, world!</h1>
+
+	<h2>한글 테스트</h2>
+	
+	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" contextmenu="mymenu">Open Modal</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Modal Header</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<p>Some text in the modal.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+		crossorigin="anonymous"></script>
+	
+
+	<script>
+	$(document).ready(function() {
+		$('.btn-info.btn-lg').mousedown(function(event) {
+			if (event.which == 2) {
+				event.preventDefault();
+				window.open(document.URL + '#myModal', '');
+			}
+		});
+		$(window).on("load", function() {
+			$(window.location.hash).modal("show");
+		});
+	});
+
+	function openModal() {
+		window.open(document.URL + '#myModal', '');
+		$(window.location.hash).modal("show");
+	}
+	</script>
+</body>
+
+</html>

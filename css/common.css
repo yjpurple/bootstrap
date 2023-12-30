@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* 
+ * 베이직 - 공통 스타일시트
+ * 2023-12-30
+ */
+
+/*#################### 폰트 ####################*/
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css"); 
+/*
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');*/
+
+/*#################### 기본 ####################*/
+@import url("reset.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css");
+@import url("bootstrap-over.css");
+
+/*#################### bootstrap overriding ####################*/
+
+:root {
+	--header-height: 60px; 
+
+	--shadow-box-1: 0px 0px 8px rgba(0, 0, 50, 0.2);
+	--shadow-box-2: 0px 0px 4px rgba(0, 0, 50, 0.4);
+
+	--pomit-font: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+	
+	--transition-custom: all 0.4s ease-in-out;
+	--transition-custom2: all 0.8s ease-in-out;
+}
+
+body {
+	font-family: var(--pomit-font);
+}
+
